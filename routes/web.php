@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
@@ -24,3 +25,4 @@ require __DIR__.'/auth.php';
 
 /* public */
 Route::resource('users',UserController::class);
+Route::resource('product',ProductController::class);
