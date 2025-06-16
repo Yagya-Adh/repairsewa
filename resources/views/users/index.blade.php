@@ -17,7 +17,7 @@
                 <a href="{{ route('users.create') }}" class="text-black bg-green-600 rounded-sm px-4 py-1">Create
                     user</a>
 
-                <a href="{{ route('product.create') }}" class="text-black bg-green-600 rounded-sm px-4 py-1">Create
+                <a href="{{ route('products.create') }}" class="text-black bg-green-600 rounded-sm px-4 py-1">Create
                     Product</a>
 
                 <thead class="bg-gray-100 dark:bg-gray-700">

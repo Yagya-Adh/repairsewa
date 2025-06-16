@@ -6,11 +6,20 @@
                     {{ __('Show Users  ') }}
                 </div>
             </div>
-            <a href="{{ route('products.index') }}"
-                class="text-black bg-gray-700 mt-2 rounded-sm px-4 py-1 btn btn-info">
+            <a href="{{ route('roles.index') }}"
+                class="text-black bg-gray-700 hover:text-white mt-2 rounded-sm px-4 py-3 btn btn-info">
                 Go back
             </a>
-            <p> Name : <strong>{{ $product->name }}</strong> </p>
+            <p> Name : <strong>{{ $role->name }}</strong> </p>
+
+            <h4>Permissions :</h4>
+            @foreach($role->permissions as $permission)
+            <p>
+                {{ $permission->name }}
+            </p>
+
+            @endforeach
+
         </div>
     </div>
 </x-app-layout>

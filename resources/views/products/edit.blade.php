@@ -3,14 +3,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __('Users') }}
+                    {{ __('Products edit') }}
                 </div>
             </div>
-            <a href="{{ route('product.index') }}"
+            <a href="{{ route('products.index') }}"
                 class="text-black bg-gray-700 mt-2 rounded-sm px-4 py-1 btn btn-info">
                 Go back
             </a>
-            <form action="{{ route('product.update',$product->id) }}" method="POST">
+            <form action="{{ route('products.update',$product->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 @session('success')

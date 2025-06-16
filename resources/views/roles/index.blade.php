@@ -14,8 +14,8 @@
             <table
                 class="min-w-full table-auto mt-6 text-left border-collapse border border-gray-300 dark:border-gray-600">
 
-                <a href="{{ route('users.index') }}" class="text-black bg-green-600 rounded-sm px-4 py-1">Get back
-
+                <a href="{{ route('roles.create') }}" class="text-white bg-green-600 rounded-sm px-4 py-3">Create
+                    Role
                     <thead class="bg-gray-100 dark:bg-gray-700">
 
                         <tr>
@@ -25,16 +25,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $index => $product)
+                        @foreach ($roles as $index => $role)
                         <tr class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td class="border px-4 py-2">{{ $index + 1 }}</td>
-                            <td class="border px-4 py-2">{{ $product->name }}</td>
+                            <td class="border px-4 py-2">{{ $role->name }}</td>
 
                             <td class="border px-4 py-2">
-                                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
-                                    <a href="{{ route('products.edit',$product->id) }}"
+                                <form action="{{ route('roles.destroy',$role->id) }}" method="POST">
+                                    <a href="{{ route('roles.edit',$role->id) }}"
                                         class="btn btn-info text-orange-500">Edit</a>
-                                    <a href="{{ route('products.show',$product->id) }}"
+                                    <a href="{{ route('roles.show',$role->id) }}"
                                         class="btn btn-info text-gray-500">Show</a>
                                     @csrf
                                     @method('DELETE')

@@ -32,9 +32,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'=>'required',
-        
         ]);
-
         Product::create([
         'name'=>$request->name, 
         ]);

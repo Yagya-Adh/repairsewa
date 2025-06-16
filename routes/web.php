@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,5 @@ require __DIR__.'/auth.php';
 
 /* public */
 Route::resource('users',UserController::class);
-Route::resource('product',ProductController::class);
+Route::resource('products',ProductController::class);
+Route::resource('roles',RoleController::class);
